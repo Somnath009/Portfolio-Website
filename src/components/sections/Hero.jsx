@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import image from '../../assets/images/image.png'
 
-const Hero = () => {
+const Hero = ({ isLoaded }) => {
   const textVariants = {
     hidden: { y: "100%", opacity: 0 },
     visible: { 
@@ -18,7 +18,7 @@ const Hero = () => {
         {/* Background Image Offset to Right */}
         <motion.div 
             initial={{ scale: 1.05, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            animate={isLoaded ? { scale: 1, opacity: 1 } : { scale: 1.05, opacity: 0 }}
             transition={{ duration: 2, ease: "easeOut" }}
             className='absolute top-0 right-0 w-full lg:w-[75%] h-full z-0 pointer-events-none'
         >
@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="relative z-10 flex flex-col items-start justify-center pointer-events-none w-full max-w-6xl mt-auto lg:mt-0">
             <div className="overflow-hidden py-2">
                 <motion.h1 
-                    initial="hidden" animate="visible" variants={textVariants}
+                    initial="hidden" animate={isLoaded ? "visible" : "hidden"} variants={textVariants}
                     className="text-[15vw] lg:text-[11vw] leading-[0.85] font-black tracking-tighter text-white uppercase text-left drop-shadow-2xl"
                 >
                     Creative
@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
             <div className="overflow-hidden py-2">
                 <motion.h1 
-                    initial="hidden" animate="visible" variants={textVariants}
+                    initial="hidden" animate={isLoaded ? "visible" : "hidden"} variants={textVariants}
                     className="text-[17vw] lg:text-[11vw] leading-[0.85] font-black tracking-tighter text-transparent uppercase text-left"
                     style={{ WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}
                 >
@@ -51,7 +51,7 @@ const Hero = () => {
             
             <motion.div 
                 initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={isLoaded ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                 transition={{ duration: 1, delay: 0.8 }}
                 className="mt-8 md:mt-12 flex items-center gap-4"
             >

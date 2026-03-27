@@ -38,7 +38,7 @@ function App() {
         {loading && <Preloader key="preloader" onComplete={() => setLoading(false)} />}
       </AnimatePresence>
       <Navbar />
-      <Hero />
+      <Hero isLoaded={!loading} />
       <TechStack />
       <Projects />
       <About />
