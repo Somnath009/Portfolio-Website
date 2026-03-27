@@ -1,8 +1,8 @@
 import React from "react";
-import case1 from "../assets/bg1.jpg";
-import case2 from "../assets/bg2.jpg";
-import case3 from "../assets/bg3.png";
-import case4 from "../assets/bg4.jpg";
+import case1 from "../../assets/images/bg1.jpg";
+import case2 from "../../assets/images/bg2.jpg";
+import case3 from "../../assets/images/bg3.png";
+import case4 from "../../assets/images/bg4.jpg";
 
 const caseStudies = [
   {
@@ -49,7 +49,7 @@ const Projects = () => {
       id="projects"
       className="
         min-h-screen h-auto
-        w-full py-16 md:py-28
+        w-full py-10 md:py-28
         bg-[#0b0b0b]
         relative
       "
@@ -66,7 +66,7 @@ const Projects = () => {
           <div
             key={index}
             data-aos="fade-up"
-            className="sticky top-[10vh] md:top-[18vh] mb-[15vh] md:mb-[25vh]"
+            className="sticky top-[8vh] md:top-[18vh] mb-[8vh] md:mb-[25vh]"
             style={{ zIndex: index + 1 }}
           >
             <div
@@ -81,6 +81,7 @@ const Projects = () => {
               <div className="flex-1">
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-700">
                   <img
+                    loading="lazy"
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover"
@@ -144,7 +145,7 @@ const Projects = () => {
           </div>
         ))}
 
-        <div className="h-[70vh]" />
+        <div className=" md:h-[70vh]" />
       </div>
     </section>
   );
