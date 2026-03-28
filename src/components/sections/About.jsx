@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../../assets/images/image2.png";
+import myImage from "../../assets/images/myImage.png";
 
 
 const About = () => {
@@ -69,7 +69,7 @@ const About = () => {
               loading="lazy"
               src={myImage}
               alt="Somnath Paul"
-              className="w-full h-full object-cover object-top filter grayscale-0 md:grayscale group-hover:grayscale-0 transition-all duration-700 transform md:group-hover:scale-105"
+              className="w-full h-full object-cover object-top transition-all duration-700 transform md:group-hover:scale-105"
             />
             <div className="absolute inset-0 border border-white/10 rounded-4xl z-10 pointer-events-none"></div>
             {/* Overlay gradient */}
