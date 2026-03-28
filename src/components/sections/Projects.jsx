@@ -54,12 +54,22 @@ const Projects = () => {
         relative
       "
     >
-      <h2
-        data-aos="fade-up"
-        className="relative text-orange-400 text-3xl md:text-4xl text-center font-semibold font-mono opacity-80 mb-8 md:mb-12 tracking-wide"
-      >
-        Projects
-      </h2>
+      <div className="flex flex-col items-center justify-center mb-16 md:mb-24 relative z-10 px-4">
+        <h2
+          data-aos="fade-up"
+          className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-[1.1] text-center"
+        >
+          Featured <br className="md:hidden" />
+          <span className="text-brand italic font-light">Projects.</span>
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="mt-6 text-white/60 text-base md:text-lg max-w-2xl text-center font-light"
+        >
+          A curated collection of my recent work, turning ideas into interactive digital experiences.
+        </p>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
         {caseStudies.map((item, index) => (
@@ -104,11 +114,7 @@ const Projects = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  <a
-                    href={item.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={item.live} target="_blank" rel="noopener noreferrer">
                     <button
                       className="
                         mt-8 bg-green-500/90
@@ -122,11 +128,7 @@ const Projects = () => {
                     </button>
                   </a>
 
-                  <a
-                    href={item.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={item.repo} target="_blank" rel="noopener noreferrer">
                     <button
                       className="
                         mt-8 bg-green-500/90

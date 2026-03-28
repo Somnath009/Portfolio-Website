@@ -8,6 +8,8 @@ import TechStack from './components/sections/TechStack.jsx'
 import Projects from './components/sections/Projects.jsx'
 import About from './components/sections/About.jsx'
 import Contact from './components/sections/Contact';
+import Expertise from './components/sections/Expertise.jsx';
+import BeyondCoding from './components/sections/BeyondCoding.jsx';
 import Footer_img from './components/layout/Footer_img';
 import Preloader from './components/layout/Preloader';
 
@@ -39,9 +41,11 @@ function App() {
       </AnimatePresence>
       <Navbar />
       <Hero isLoaded={!loading} />
+      <Expertise />
       <TechStack />
       <Projects />
       <About />
+      <BeyondCoding />
       <Contact />
       <Footer_img />
     </div>
