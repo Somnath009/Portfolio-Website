@@ -30,7 +30,7 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-2" : "py-6"} px-4 md:px-12`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-2" : "py-2 md:py-6"} px-4 md:px-12`}
     >
       <div
         className={`mx-auto max-w-7xl flex items-center justify-between transition-all duration-500 ${scrolled ? "bg-white/5 border border-white/10 backdrop-blur-xl rounded-full px-6 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.5)]" : "bg-transparent px-2 py-2"}`}

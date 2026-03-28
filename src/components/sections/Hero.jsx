@@ -32,7 +32,7 @@ const Hero = ({ isLoaded }) => {
       >
         <img
           loading="eager"
-          className="w-full h-full object-cover object-[center_top] filter grayscale md:grayscale-0 opacity-60 md:opacity-80 transition-all duration-1000"
+          className="w-full h-full object-cover object-[center_top] lg:object-bottom-left filter grayscale md:grayscale-0 opacity-60 md:opacity-80 transition-all duration-1000"
           src={image}
           alt="Hero Background"
         />
