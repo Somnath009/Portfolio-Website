@@ -1,6 +1,7 @@
 import React from "react";
 import myImage from "../../assets/images/image2.png";
 
+
 const About = () => {
   return (
     <section
